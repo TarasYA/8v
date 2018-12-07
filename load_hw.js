@@ -22,6 +22,7 @@ $.ajax('/hw/list.json', {
                                 return
                             }
                             description = xhr.responseText
+                            console.log(window.list_of_predmets)
                             $.ajax('/hw/' + window.list_of_predmets[window.i] + '/name', {
                                 complete: (xhr, stat) => {
                                     if (stat != 'success') {
