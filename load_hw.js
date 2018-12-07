@@ -5,7 +5,7 @@ $.ajax('/hw/list.json', {
             console.error(stat);
             return;
         }
-        list_of_predmets = JSON.parse(xhr.responseText);
+        window.list_of_predmets = JSON.parse(xhr.responseText);
         console.log(list_of_predmets.length)
         $.ajax('/card.tmp', {
             complete: (xhr, stat) => {
