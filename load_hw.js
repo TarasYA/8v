@@ -1,3 +1,4 @@
+layout = $('.mdl-layout__content')
 $.ajax('/hw/list.json', {
     complete: (xhr, stat) => {
         if (stat != 'success') {
@@ -22,7 +23,7 @@ $.ajax('/hw/list.json', {
                                 return
                             }
                             description = xhr.responseText
-                            $.ajax('/hw/' + window.p + '/name', {
+                            $.ajax('/hw/' + window.p + 'name', {
                                 complete: (xhr, stat) => {
                                     if (stat != 'success') {
                                         console.error(stat)
@@ -30,7 +31,7 @@ $.ajax('/hw/list.json', {
                                     }
                                     name = xhr.responseText
                                     card = template.replace('TYPE', window.p).replace('TEXT', description).replace('NAME', name)
-                                    $('.mdl-layout-content').append(card)
+                                    layout.append(card)
                                 }
                             })
                         }
