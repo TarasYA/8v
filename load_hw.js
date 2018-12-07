@@ -23,7 +23,7 @@ $.ajax('/hw/list.json', {
                                 return
                             }
                             description = xhr.responseText
-                            $.ajax('/hw/' + window.p + 'name', {
+                            $.ajax('/hw/' + window.p + '/name', {
                                 complete: (xhr, stat) => {
                                     if (stat != 'success') {
                                         console.error(stat)
