@@ -1,4 +1,4 @@
-layout = $('.mdl-layout__content')
+layout = $('#parent')
 $.ajax('/hw/list.json', {
     complete: (xhr, stat) => {
         if (stat != 'success') {
