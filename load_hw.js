@@ -1,4 +1,3 @@
-layout = $('.mdl-layout-content')
 $.ajax('/hw/list.json', {
     complete: (xhr, stat) => {
         if (stat != 'success') {
@@ -31,7 +30,7 @@ $.ajax('/hw/list.json', {
                                     }
                                     name = xhr.responseText
                                     card = template.replace('TYPE', window.p).replace('TEXT', description).replace('NAME', name)
-                                    layout.append(card)
+                                    $('.mdl-layout-content').append(card)
                                 }
                             })
                         }
