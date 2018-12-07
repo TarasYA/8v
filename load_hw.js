@@ -30,7 +30,7 @@ $.ajax('/hw/list.json', {
                                         return
                                     }
                                     name = xhr.responseText
-                                    card = template.replace('TYPE', window.p).replace('TEXT', description).replace('NAME', name)
+                                    card = template.replace('TYPE', window.p).replace('TEXT', description).replace('TITLE', name)
                                     layout.append(card)
                                 }
                             })
