@@ -14,7 +14,7 @@ $.ajax('/hw/list.json', {
                     return;
                 }
                 template = xhr.responseText;
-                for (var i = window.list_of_predmets.length - 1; i >= 0; i--) {
+                for (window.i = window.list_of_predmets.length - 1; i >= 0; i--) {
                     $.ajax('/hw/' + window.list_of_predmets[window.i] + '/desc', {
                         complete: (xhr, stat) => {
                             if (stat != 'success') {
