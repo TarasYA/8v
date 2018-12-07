@@ -25,7 +25,7 @@ padding-right: 10px;
 .demo-card-event > .mdl-card__title,
 .demo-card-event > .mdl-card__actions,
 .demo-card-event > .mdl-card__actions > .mdl-button {
-color: #fff;
+color: 87% black;
 }
 </style>
 <div class="demo-card-event mdl-card mdl-shadow--2dp">
