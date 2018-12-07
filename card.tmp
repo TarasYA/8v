@@ -1,5 +1,7 @@
 <div class="mdl-card">
-	<div class="mdl-card__title">TITLE</div>
+	<div class="mdl-card__title">
+		<div class="mdl-card__title-text">TITLE</div>
+	</div>
 	<div class="mdl-card__supporting-text">TEXT</div>
 	<div class="mdl-card__actions">
 		<a href="/photos?t=TYPE">
