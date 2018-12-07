@@ -5,8 +5,8 @@ $.ajax('/hw/list.json', {
             console.error(stat);
             return;
         }
-        window.list_of_predmets = JSON.parse(xhr.responseText);
-        console.log(window.list_of_predmets.length)
+        list_of_predmets = JSON.parse(xhr.responseText);
+        console.log(list_of_predmets)
         $.ajax('/card.tmp', {
             complete: (xhr, stat) => {
                 if (stat != 'success') {
@@ -14,23 +14,23 @@ $.ajax('/hw/list.json', {
                     return;
                 }
                 template = xhr.responseText;
-                for (window.i = window.list_of_predmets.length - 1; i >= 0; i--) {
-                    $.ajax('/hw/' + window.list_of_predmets[window.i] + '/desc', {
+                for (var i = list_of_predmets.length - 1; i >= 0; i--) {
+                    window.p = list_of_predmets[i];
+                    $.ajax('/hw/' + window.p + '/desc', {
                         complete: (xhr, stat) => {
                             if (stat != 'success') {
                                 console.error(stat)
                                 return
                             }
                             description = xhr.responseText
-                            console.log(window.list_of_predmets)
-                            $.ajax('/hw/' + window.list_of_predmets[window.i] + '/name', {
+                            $.ajax('/hw/' + window.p + 'name', {
                                 complete: (xhr, stat) => {
                                     if (stat != 'success') {
                                         console.error(stat)
                                         return
                                     }
                                     name = xhr.responseText
-                                    card = template.replace('TYPE', window.list_of_predmets[window.i]).replace('TEXT', description).replace('NAME', name)
+                                    card = template.replace('TYPE', window.p).replace('TEXT', description).replace('NAME', name)
                                     layout.append(card)
                                 }
                             })
