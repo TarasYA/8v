@@ -9,7 +9,7 @@ on_count = (type) => {
         n = parseInt(xhr.responseText)
         for (i = 1; i <= n; i++) {
             if (id < 10) id = '0' + id
-            $('#parent').append('<img src="/hw/' + type + '/0' + id + '.png"></img>')
+            $('#layout').append('<img src="/hw/' + type + '/0' + id + '.png"></img>')
         }
     }
 }
