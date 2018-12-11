@@ -8,15 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
-    <!-- Uses a transparent header that draws on top of the layout's background -->
     <style>
     .demo-layout-transparent {
     background: url('/back.jpeg') center / cover;
     }
     .demo-layout-transparent .mdl-layout__header,
     .demo-layout-transparent .mdl-layout__drawer-button {
-    /* This background is dark, so we set text to white. Use 87% black instead if
-    your background is light. */
     color: 87% black;
     }
     </style>
@@ -25,7 +22,6 @@
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">8-B</span>
-          <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <!--nav class="mdl-navigation">
